@@ -1,0 +1,127 @@
+:root {
+    --color-font-main : rgb(210, 210, 210);
+    --color-input-active : rgb(113, 137, 136);
+    --color-input-inactive : rgb(97, 97, 97);
+    --color-background : rgb(60, 60, 60);
+    --color-banner : rgba(0, 0, 0, 0.5);
+}
+
+* {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    color: var(--color-font-main);
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    height: 100svh;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-background);
+}
+
+h1 {
+    font-size: 1.4em;
+}
+
+.left {
+    flex-grow: 1;
+    width: 480px;
+    max-width: 40%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.banner {
+    height: 160px;
+    width: 100%;
+    background-color: var(--color-banner);
+    position: absolute;
+    top: 25%;
+}
+
+.main {
+    width: 500px;
+    margin-right: 100px;
+    margin-left: 20px;
+}
+
+img {
+    min-height: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5em;
+}
+
+form .form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+input {
+    background-color: transparent;
+    border: none;
+    color: var(--color-font-main);
+    outline: none;
+    z-index: 2;
+}
+
+label {
+    color: var(--color-input-inactive);
+    position: relative;
+    transform: translateY(100%);
+    z-index: 1;
+    transition: 0.2s;
+}
+
+label.is-active {
+    transform: translateY(0%);
+    transition: 0.2s;
+    font-size: 0.8em;
+    color: var(--color-font-main);
+}
+
+form .form-input {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.form-input::after,
+.form-input::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    height: 2px;
+    align-self: center;
+}
+
+.form-input::before {
+    background-color: var(--color-input-inactive);
+    width: 100%;
+    z-index: 1;
+}
+
+.form-input::after {
+    transition: 0.2s;
+    background-color: var(--color-input-active);
+    width: 0%;
+    z-index: 2;
+}
+
+.form-input:hover::after,
+.form-input.in-focus::after {
+    width: 100%;
+    transition: 0.2s;
+}
