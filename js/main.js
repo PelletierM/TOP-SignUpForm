@@ -21,11 +21,11 @@ let errorMessages = {
 
 inputFields.forEach(function(inputField) {
     inputField.addEventListener("focusin", function(e){
-        e.target.parentElement.classList.add("in-focus")
+        e.target.parentElement.classList.add("in-focus");
         e.target.parentElement.querySelector("label").classList.add("is-active");
     })
     inputField.addEventListener("focusout", function(e){
-        e.target.parentElement.classList.remove("in-focus")
+        e.target.parentElement.classList.remove("in-focus");
         if(e.target.value == "") {
             e.target.parentElement.querySelector("label").classList.remove("is-active");
         }
@@ -55,7 +55,7 @@ submitButton.addEventListener("click", function(e){
     let prevent = false;
     inputFields.forEach(function(inputField) {
         if (!inputField.validity.valid) {
-            updateErrorMessage(inputField)
+            updateErrorMessage(inputField);
             prevent = true;
         }
     })
@@ -63,7 +63,7 @@ submitButton.addEventListener("click", function(e){
 });
 
 function checkValidityFocusOut(e) {
-    if (e.target.value !== "" && !e.target.validity.valid) updateErrorMessage(e.target)
+    if (e.target.value !== "" && !e.target.validity.valid) updateErrorMessage(e.target);
     }
 
 function updateErrorMessage(inputField) {
@@ -78,7 +78,7 @@ function updateErrorMessage(inputField) {
         errorSpan.textContent = errorMessages["patternMismatch"][inputField.name];
     }
     else {
-        errorSpan.textContent = errorMessages["valid"]
+        errorSpan.textContent = errorMessages["valid"]; /* This is just as a safety in case there would be another reason for invalid input */
     }
     inputField.parentElement.classList.add("invalid");
 }

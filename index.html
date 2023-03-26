@@ -4,64 +4,69 @@
     <meta charset="UTF-8">
     <title>Sign-up Form</title>
     <script src="./js/main.js" defer></script>
+    <script src="./js/loadSVG.js" defer></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="left">
-        <div class="banner">
-        
-        </div>
-        <img src="./img/background-img.jpg" alt="Winter landscape">
-    </div>
     <div class="main">
-        <div>
-            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.</p>
-            <p>Sign up <em>now</em> to get started.</p>
-            <p>You <em>know</em> you want to.</p>
+        <div class="left">
+            <div class="banner">
+                <div class="svg">
+                    <a href="https://github.com/PelletierM/TOP-SignUpForm" class="svg-link"></a>
+                </div>
+            </div>
+            <img src="./img/background-img.jpg" alt="Winter landscape">
         </div>
-        <div class="form-container">
-            <h1>Let's do this!</h1>
-            <form action="" method="get" id="main-form" novalidate>
-                <div class="form-row">
-                    <div class="form-input">
-                        <label for="first-name" class="required">FIRST NAME</label>
-                        <input type="text" id="first-name" name="first-name" placeholder=" " required>
-                        <span class="error-message"></span>
+        <div class="right">
+            <div class="text-main">
+                <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.</p>
+                <p>Sign up <em>now</em> to get started.</p>
+                <p>You <em>know</em> you want to.</p>
+            </div>
+            <div class="form-container">
+                <h1>Let's do this!</h1>
+                <form action="" method="get" id="main-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-input">
+                            <label for="first-name" class="required">FIRST NAME</label>
+                            <input type="text" id="first-name" name="first-name" placeholder=" " required>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-input">
+                            <label for="last-name" class="required">LAST NAME</label>
+                            <input type="text" id="last-name" name="last-name" placeholder="" required>
+                            <span class="error-message"></span>
+                        </div>
                     </div>
-                    <div class="form-input">
-                        <label for="last-name" class="required">LAST NAME</label>
-                        <input type="text" id="last-name" name="last-name" placeholder="" required>
-                        <span class="error-message"></span>
+                    <div class="form-row">
+                        <div class="form-input">
+                            <label for="email" class="required">EMAIL</label>
+                            <input type="email" id="email" name="email" placeholder="" required>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-input">
+                            <label for="phone-number">PHONE NUMBER</label>
+                            <input type="tel" id="phone-number" name="phone-number" placeholder="">
+                        </div>
                     </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-input">
-                        <label for="email" class="required">EMAIL</label>
-                        <input type="email" id="email" name="email" placeholder="" required>
-                        <span class="error-message"></span>
+                    <div class="form-row">
+                        <div class="form-input">
+                            <label for="paswword" class="required">PASSWORD</label>
+                            <input type="password" id="password" name="password" placeholder="" required>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-input">
+                            <label for="password-check" class="required">CONFIRM PASSWORD</label>
+                            <input type="password" id="password-check" name="password-check" placeholder="" pattern="" required>
+                            <span class="error-message"></span>
+                        </div>
                     </div>
-                    <div class="form-input">
-                        <label for="phone-number">PHONE NUMBER</label>
-                        <input type="tel" id="phone-number" name="phone-number" placeholder="">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-input">
-                        <label for="paswword" class="required">PASSWORD</label>
-                        <input type="password" id="password" name="password" placeholder="" required>
-                        <span class="error-message"></span>
-                    </div>
-                    <div class="form-input">
-                        <label for="password-check" class="required">CONFIRM PASSWORD</label>
-                        <input type="password" id="password-check" name="password-check" placeholder="" pattern="" required>
-                        <span class="error-message"></span>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div>
-            <button form="main-form" type="submit">Create Account</button>
-            <p>Already have an account?</p>
+                </form>
+            </div>
+            <div>
+                <button form="main-form" type="submit">Create Account</button>
+                <p>Already have an account? <a href="">Sign in</a></p>
+            </div>
         </div>
     </div>
 </body>
