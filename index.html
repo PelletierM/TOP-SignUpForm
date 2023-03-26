@@ -21,21 +21,24 @@
         </div>
         <div class="form-container">
             <h1>Let's do this!</h1>
-            <form action="" method="get" id="main-form">
+            <form action="" method="get" id="main-form" novalidate>
                 <div class="form-row">
                     <div class="form-input">
-                        <label for="first-name">FIRST NAME</label>
-                        <input type="text" id="first-name" name="first-name" placeholder=" ">
+                        <label for="first-name" class="required">FIRST NAME</label>
+                        <input type="text" id="first-name" name="first-name" placeholder=" " required>
+                        <span class="error-message"></span>
                     </div>
                     <div class="form-input">
-                        <label for="last-name">LAST NAME</label>
-                        <input type="text" id="last-name" name="last-name" placeholder="">
+                        <label for="last-name" class="required">LAST NAME</label>
+                        <input type="text" id="last-name" name="last-name" placeholder="" required>
+                        <span class="error-message"></span>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-input">
-                        <label for="email">EMAIL</label>
-                        <input type="email" id="email" name="email" placeholder="">
+                        <label for="email" class="required">EMAIL</label>
+                        <input type="email" id="email" name="email" placeholder="" required>
+                        <span class="error-message"></span>
                     </div>
                     <div class="form-input">
                         <label for="phone-number">PHONE NUMBER</label>
@@ -44,12 +47,14 @@
                 </div>
                 <div class="form-row">
                     <div class="form-input">
-                        <label for="paswword">PASSWORD</label>
-                        <input type="password" id="password" name="password" placeholder="">
+                        <label for="paswword" class="required">PASSWORD</label>
+                        <input type="password" id="password" name="password" placeholder="" required>
+                        <span class="error-message"></span>
                     </div>
                     <div class="form-input">
-                        <label for="password-check">CONFIRM PASSWORD</label>
-                        <input type="password" id="password-check" name="password-check" placeholder="">
+                        <label for="password-check" class="required">CONFIRM PASSWORD</label>
+                        <input type="password" id="password-check" name="password-check" placeholder="" pattern="" required>
+                        <span class="error-message"></span>
                     </div>
                 </div>
             </form>
