@@ -41,7 +41,7 @@
     animation-fill-mode: backwards;
 }
 
-.form-container,
+
 .form-container  > * {
     animation-name: form-appear;
     animation-duration: 1s;
@@ -57,6 +57,7 @@
     animation-fill-mode: backwards;
     animation-timing-function: cubic-bezier(.1,.48,.15,.99);
 }
+
 /* STYLING */
 * {
     box-sizing: border-box;
